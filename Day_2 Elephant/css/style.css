@@ -1,0 +1,174 @@
+body {
+  background-image:url('https://static.pexels.com/photos/60703/fog-tree-desert-sky-60703.jpeg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  overflow:clip;
+}
+.head {
+  position:absolute;
+  width:150px;
+  height:250px;
+  top:50%;
+  left:50%;
+  border-radius:20% 20% 50% 50%;
+  background:#707070 ;
+  margin-left:-75px;
+  margin-top:-125px;
+
+}
+ .trump{
+  position:absolute;
+  width:50px;
+  height:220px;
+  top:50%;
+  left:50%;
+  background:red;
+  border-radius:10% 10% 40% 40%;
+  margin-left:-25px;
+   margin-top:25px;
+  background: linear-gradient(to bottom,#707070,#383838 ); /* Standard syntax */
+
+}
+.eyeWhiteLeft {
+  position:absolute;
+  width:35px;
+  height:60px;
+  background:white;
+  border-radius:50%;
+  top:20%;
+  left:15%;
+}
+.eyeBlackLeft {
+    position:absolute;
+  width:30px;
+  height:30px;
+  background:black;
+  border-radius:50%;
+    top:50%;
+  left:50%;
+  margin-top:-5px;
+  margin-left:-15px;
+}
+.sparkleLeft {
+    position:absolute;
+  width:10px;
+  height:10px;
+  background:white;
+  border:solid 1px grey;
+  border-radius:50%;
+  top:0%;
+  left:0%;
+}
+.eyeWhiteRight {
+  position:absolute;
+  width:35px;
+  height:60px;
+  background:white;
+  border-radius:50%;
+  top:20%;
+  left:65%;
+}
+.eyeBlackRight {
+    position:absolute;
+  width:30px;
+  height:30px;
+  background:black;
+  border-radius:50%;
+    top:50%;
+  left:50%;
+  margin-top:-5px;
+  margin-left:-15px;
+}
+.sparkleRight {
+    position:absolute;
+  width:10px;
+  height:10px;
+  background:white;
+  border:solid 1px grey;
+  border-radius:50%;
+  top:0%;
+  left:0%;
+}
+.earTopLeft {
+  position:absolute;
+  width:200px;
+  height:200px;
+    border-radius:50%;
+  top:0%;
+  left:0%;
+z-index:-1;
+  margin-top:-100px;
+  margin-left:-140px;
+  background:#383838;
+}
+.earBottomLeft {
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  top:75%;
+  left:15%;
+  z-index:-1;
+  margin-top:0px;
+  margin-left:0px;
+  background:#383838;
+}
+.earTopRight {
+  position:absolute;
+  width:200px;
+  height:200px;
+    border-radius:50%;
+  top:0%;
+  left:100%;
+z-index:-1;
+  margin-top:-100px;
+  margin-left:-60px;
+  background:#383838;
+}
+.earBottomRight {
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  top:75%;
+  left:0%;
+  z-index:-1;
+  margin-top:0px;
+  margin-left:0px;
+  background:#383838;
+}
+.cornR {
+    position:absolute;
+
+  top:-110%;
+  left:-240%;
+  width:800px;
+  height:800px;
+  -webkit-clip-path: polygon(60% 61%, 63% 69%, 66% 77%, 67% 80%, 65% 79%, 63% 76%, 61% 71%, 59% 66%, 58% 64%);
+    background:white;
+    z-index:-1;
+}
+.cornL {
+    position:absolute;
+  top:-110%;
+  left:-195%;
+  width:800px;
+  height:800px;
+  -webkit-clip-path: polygon(60% 61%, 63% 69%, 66% 77%, 67% 80%, 65% 79%, 63% 76%, 61% 71%, 59% 66%, 58% 64%);
+    background:white;
+    z-index:-1;
+  transform: rotate(0deg) scaleX(-1);
+}
+.bodyAll{
+  position:absolute;
+  width:800px;
+  height:550px;
+    top:0%;
+  left:50%;
+  margin-left:-393px;
+  margin-top:-70px;
+  background:red;
+  -webkit-clip-path: polygon(31% 50%, 67% 49%, 61% 94%, 37% 94%);
+    background: linear-gradient(to bottom,#707070,#8c8c8c,#383838 );
+  z-index:-2;
+}
