@@ -1,0 +1,167 @@
+var Header = React.createClass({
+  render: function() {
+    return (
+      <div className="container-fluid">
+        <div className="row col-md-12">
+          <h1>Ana Toma</h1>
+          <a href="https://anawebdev.surge.sh" target="_blank">
+            <h3>- portfolio -</h3>
+          </a>
+          <a href="http://dailycssimages.com" target="_blank">
+            <h3>#dailycsssimages</h3>
+          </a>
+        </div>
+      </div>
+    )
+  }
+});
+
+var Display = React.createClass({
+  render: function(){
+    return (
+      <div className="col-md-2">
+        <a href={this.props.url} target="_blank">
+          <img className="img-fluid center-block" src={this.props.img}/>
+        </a>
+      </div>
+    );
+  }
+});
+
+var Title = React.createClass({
+  render: function(){
+    return (
+      <div className="row">
+          <div className="col-md-12">
+            <h2>Week {this.props.week}</h2>
+            <h4>{this.props.text}</h4>
+          </div>
+        </div>
+    );
+  }
+});
+
+var Section = React.createClass({
+  render: function() {
+    return (
+      <div className="container-fluid group">
+        <Title week={this.props.week} text={this.props.text} />
+        <div className="row">
+          <div className="col-md-1"/>
+          <Display img={this.props.img1} url={this.props.url1} />
+          <Display img={this.props.img2} url={this.props.url2} />
+          <Display img={this.props.img3} url={this.props.url3} />
+          <Display img={this.props.img4} url={this.props.url4} />
+          <Display img={this.props.img5} url={this.props.url5} />
+        </div>
+         
+       
+      </div>
+    );
+  }
+});
+
+var App = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <Header />
+        <Section 
+          week="1" 
+          text="- cute animals -"
+          img1="http://i.imgur.com/5ZooWEN.jpg"
+          img2="http://i.imgur.com/w4zaL04.jpg"
+          img3="http://i.imgur.com/dCVqWpP.jpg"
+          img4="http://via.placeholder.com/150x150"
+          img5="http://via.placeholder.com/150x150"
+          url1="https://codepen.io/feuerbird29/full/JWOBdV/"
+          url2="https://codepen.io/feuerbird29/full/jLNjmw/"
+          url3="https://codepen.io/feuerbird29/full/OjPRmm/"
+        />
+        <Section 
+          week="2" 
+          text="- office objects -" 
+          img1=""
+          img2=""
+          img3=""
+          img4=""
+          img5=""
+          />
+        <Section 
+          week="3" 
+          text="- yummy food -" 
+          img1=""
+          img2=""
+          img3=""
+          img4=""
+          img5=""
+          />
+        <Section 
+          week="4" 
+          text="- monsters and zombies -" 
+          img1=""
+          img2=""
+          img3=""
+          img4=""
+          img5=""
+          />
+        <Section 
+          week="5" 
+          text="- superheroes -" 
+          img1=""
+          img2=""
+          img3=""
+          img4=""
+          img5=""
+          />
+        <Section 
+          week="6" 
+          text="- icons -" 
+          img1=""
+          img2=""
+          img3=""
+          img4=""
+          img5=""
+          />
+        <Section 
+          week="7" 
+          text="- logos -" 
+          img1=""
+          img2=""
+          img3=""
+          img4=""
+          img5=""
+          />
+        <Section 
+          week="8" 
+          text="- electronics -" 
+          img1=""
+          img2=""
+          img3=""
+          img4=""
+          img5=""
+          />
+        <Section 
+          week="9" 
+          text="- monsters and zombies -" 
+          img1=""
+          img2=""
+          img3=""
+          img4=""
+          img5=""
+          />
+        <Section 
+          week="10" 
+          text="- celebrations and parties -" 
+          img1=""
+          img2=""
+          img3=""
+          img4=""
+          img5=""
+          />
+      </div>
+    );
+  }
+})
+        
+ReactDOM.render(<App />, document.getElementById("app"));

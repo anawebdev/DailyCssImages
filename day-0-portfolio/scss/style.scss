@@ -1,0 +1,53 @@
+$primary: #00B295;
+$title: #828A95;
+$gradient: #CEEAF7;
+$panel: rgba(255,255,255, 1);
+$accent: #EF6461;
+
+$shadow: rgba(0,0,0, 0.18);
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: $accent;
+}
+.background {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: $gradient;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #f2fcfe, $gradient);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #f2fcfe, $gradient); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+h1,h2,h3,h6 {
+  padding: 5px;
+}
+h1{
+  padding-top: 40px;
+}
+h1, h3 {
+  color: $title;
+  font-weight: 700;
+}
+.group {
+  padding: 0px;
+  background: $panel;
+  margin: 50px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px $shadow;
+}
+img {
+  margin: 20px 2px 40px 2px;
+  border: 1px solid $accent;
+  box-shadow: 3px 3px 10px $shadow;
+}
+a:hover, a:link, a:active, a:visited, h3:hover {
+  text-decoration: none;
+  color: $accent;
+}
