@@ -8,9 +8,11 @@ This repository tracks the #dailycssimages challenge. More info about the challe
 
 ### Week 1
 
+![](http://i.imgur.com/NfAJWHQ.jpg)
+
 1. [Bear Cub](https://codepen.io/feuerbird29/pen/JWOBdV)
 2. [Elephant](https://codepen.io/feuerbird29/full/jLNjmw/)
 3. [Beaver](https://codepen.io/feuerbird29/full/OjPRmm/)
-4. Tiger
-5. Dory from Finding Nemo
+4. [Tiger](https://codepen.io/feuerbird29/full/VzYyLZ)
+5. [Dory from Finding Nemo](https://codepen.io/feuerbird29/full/oeXbpN)
 

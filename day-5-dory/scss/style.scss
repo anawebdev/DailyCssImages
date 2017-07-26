@@ -1,0 +1,637 @@
+// COLOR SCHEME
+
+$dory: #51C6EE;
+$dory-medium: #4573C0;
+$dory-shadow: #414257;
+$eyes-light: #EE42D2;
+$eyes-dark: #7B3C6E;
+$wings-yellow: #FAF78D;
+$dark-bckg-blue: #f3b2c6;
+$light-bckg-blue: #5FC3E4;
+$shadow: rgba(0, 0, 0, 0.3);
+$transparent-shine: rgba(129, 212, 250, 0.2);
+$white: rgba(225, 225, 225, 0.7);
+$transparent: rgba(225, 225, 225, 0.2);
+
+// GENERAL SETTINGS
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: $dark-bckg-blue; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    $light-bckg-blue $dark-bckg-blue
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    $light-bckg-blue,
+    $dark-bckg-blue
+  );
+  background-attachment: fixed;
+
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+a:active, a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #D81B60;
+}
+
+// MAIN BOX
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  padding: 0;
+  margin-top: 30px;
+  width: 600px;
+  height: 450px;
+}
+.body-box {
+  position: absolute;
+  height: 70%;
+  width: 50%;
+  top: 15%;
+  left: 25%;
+}
+.body {
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  top: 15%;
+  left: 25%;
+  background: $dory;
+  border-radius: 30% 30% 50% 50%;
+  border: 1px #1E88E5 solid;
+  background: $dory;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    $dory 0%,
+    $dory 40%,
+    $dory-shadow 95%
+  );
+}
+
+// EYES
+
+.eye-base-l {
+  position: absolute;
+  height: 40%;
+  width: 50%;
+  background: $dory-medium;
+  border-radius: 50%;
+  top: 20%;
+  left: -12%;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    $dory 0%,
+    $dory 40%,
+    $dory-shadow 95%
+  );
+}
+.eye-white-l {
+  position: absolute;
+  height: 70%;
+  width: 90%;
+  top: 15%;
+  left: 5%;
+  border-radius: 50%;
+  background: white;
+}
+.eye-color-l {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  background: $eyes-light;
+  border-radius: 50%;
+  right: 0;
+  top: 5%;
+  background: $eyes-dark;
+  background: -webkit-linear-gradient(to top, $eyes-light, $eyes-dark);
+  background: linear-gradient(to top, $eyes-light, $eyes-dark);
+  animation-name: eyel;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes eyel {
+  25% {
+    right: 5%;
+  }
+  50% {
+    right: 10%;
+  }
+  75% {
+    right: 5%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.eye-black-l {
+  position: absolute;
+  height: 66%;
+  width: 66%;
+  top: 18%;
+  left: 18%;
+  background: black;
+  border-radius: 50%;
+}
+.shine-big-l {
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  background: white;
+  border-radius: 50%;
+}
+.shine-small-l {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  top: 39%;
+  left: -12%;
+  background: white;
+  border-radius: 50%;
+}
+.eye-base-r {
+  position: absolute;
+  height: 40%;
+  width: 50%;
+  background: $dory-medium;
+  border-radius: 50%;
+  top: 20%;
+  right: -12%;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    $dory 0%,
+    $dory 40%,
+    $dory-shadow 95%
+  );
+}
+.eye-white-r {
+  position: absolute;
+  height: 70%;
+  width: 90%;
+  top: 15%;
+  left: 5%;
+  border-radius: 50%;
+  background: white;
+}
+.eye-color-r {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  background: $eyes-light;
+  border-radius: 50%;
+  right: 0;
+  top: 5%;
+  background: $eyes-dark;
+  background: -webkit-linear-gradient(to top, $eyes-light, $eyes-dark);
+  background: linear-gradient(to top, $eyes-light, $eyes-dark);
+  animation-name: eyer;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes eyer {
+  25% {
+    right: 5%;
+  }
+  50% {
+    right: 10%;
+  }
+  75% {
+    right: 5%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.eye-black-r {
+  position: absolute;
+  height: 66%;
+  width: 66%;
+  top: 18%;
+  left: 18%;
+  background: black;
+  border-radius: 50%;
+}
+.shine-big-r {
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  background: white;
+  border-radius: 50%;
+}
+.shine-small-r {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  top: 39%;
+  left: -12%;
+  background: white;
+  border-radius: 50%;
+}
+
+// MOUTH
+
+.mouth {
+  position: absolute;
+  height: 30px;
+  width: 60px;
+  top: 70%;
+  left: 40%;
+  background: $dory-medium;
+  border-radius: 0 0 60px 60px;
+  transform: rotate(-10deg);
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    $dory-medium 0%,
+    $dory-medium 40%,
+    $dory-shadow 95%
+  );
+  animation-name: mouth-movement;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes mouth-movement {
+  25% {
+    height: 25px;
+  }
+  50% {
+    height: 20px;
+  }
+  75% {
+    height: 25px;
+  }
+  100% {
+    height: 30px;
+  }
+}
+.mouth-inner {
+  position: absolute;
+  height: 22px;
+  width: 50px;
+  left: 5px;
+  background: $dory-shadow;
+  border-radius: 0 0 44px 44px;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    #1f202d 0%,
+    #1f202d 40%,
+    $dory-shadow 95%
+  );
+  animation-name: mouth-inner;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes mouth-inner {
+  25% {
+    height: 17px;
+  }
+  50% {
+    height: 12px;
+  }
+  75% {
+    height: 17px;
+  }
+  100% {
+    height: 22px;
+  }
+}
+
+// DECORATION
+
+.deco-base {
+  position: absolute;
+  width: 36%;
+  height: 10%;
+  top: -5%;
+  left: 32%;
+  background: $dory-medium;
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 30%, 0 30%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 0 50%);
+  background: -webkit-linear-gradient(to top, $eyes-light, $eyes-dark);
+  background: linear-gradient(to bottom, $dory, $dory-shadow);
+}
+.deco-r {
+  position: absolute;
+  width: 36%;
+  height: 10%;
+  right: 32%;
+  top: -5%;
+  background: $dory-shadow;
+  -webkit-clip-path: polygon(80% 0%, 100% 30%, 80% 60%);
+  clip-path: polygon(80% 0%, 100% 50%, 80% 80%);
+}
+.deco-l {
+  position: absolute;
+  width: 36%;
+  height: 10%;
+  right: 32%;
+  top: -5%;
+  background: $dory-shadow;
+  -webkit-clip-path: polygon(80% 0%, 100% 30%, 80% 60%);
+  clip-path: polygon(80% 20%, 100% 50%, 80% 100%);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+// WINGS
+
+.wing-base-l {
+  position: absolute;
+  width: 30%;
+  height: 25%;
+  left: -2.5%;
+  background: $wings-yellow;
+  -webkit-clip-path: polygon(50% 0, 20% 100%, 79% 100%);
+  clip-path: polygon(50% 0, 20% 100%, 79% 100%);
+}
+.wing-black-l {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: black;
+  -webkit-clip-path: polygon(50% 0, 20% 100%, 79% 100%);
+  clip-path: polygon(50% 0, 20% 80%, 79% 80%);
+}
+.wing-blue-l {
+  position: absolute;
+  width: 20%;
+  height: 25%;
+  left: 2.5%;
+  background: $dory-medium;
+  -webkit-clip-path: polygon(50% 0, 20% 100%, 79% 100%);
+  clip-path: polygon(50% 0, 20% 60%, 79% 60%);
+}
+.wing-base-r {
+  position: absolute;
+  width: 30%;
+  height: 25%;
+  left: -2.5%;
+  background: $wings-yellow;
+  -webkit-clip-path: polygon(50% 0, 20% 100%, 79% 100%);
+  clip-path: polygon(50% 0, 20% 100%, 79% 100%);
+}
+.wing-black-r {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background: black;
+  -webkit-clip-path: polygon(50% 0, 20% 100%, 79% 100%);
+  clip-path: polygon(50% 0, 20% 80%, 79% 80%);
+}
+.wing-blue-r {
+  position: absolute;
+  width: 20%;
+  height: 25%;
+  left: 2.5%;
+  background: $dory-medium;
+  -webkit-clip-path: polygon(50% 0, 20% 100%, 79% 100%);
+  clip-path: polygon(50% 0, 20% 60%, 79% 60%);
+}
+.box-r {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 65%;
+  left: 73%;
+  transform: rotate(-30deg);
+  animation-name: wingr;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes wingr {
+  0% {
+    transform: rotate(-30deg);
+  }
+  25% {
+    transform: rotate(-33deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(-27deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes wingl {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(32deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(29deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+.box-l {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 85%;
+  left: 5%;
+  transform: rotate(30deg);
+  animation-name: wingl;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes float {
+  25% {
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+  50% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  75% {
+    margin-left: 10px;
+    margin-left: -10px;
+  }
+  100% {
+    margin-left: 0;
+    margin: 0px;
+  }
+}
+
+.body-box {
+  animation-name: float;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+// BUBBLES
+
+.bubble1 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  left: 4%;
+  border-radius: 50%;
+  opacity: 0;
+  animation-name: bubble-right;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    $transparent 0%,
+    $transparent 40%,
+    $white 95%
+  );
+}
+.bubble2 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 12%;
+  left: 20%;
+  border-radius: 50%;
+  opacity: 0;
+  animation-name: bubble-left;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    $transparent 0%,
+    $transparent 40%,
+    $white 95%
+  );
+}
+.bubble3 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: -10%;
+  left: 80%;
+  border-radius: 50%;
+  opacity: 0;
+  animation-name: bubble-right;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    $transparent 0%,
+    $transparent 40%,
+    $white 95%
+  );
+}
+.bubble4 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  bottom: 5%;
+  left: 60%;
+  border-radius: 50%;
+  opacity: 0;
+  animation-name: bubble-right;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    $transparent 0%,
+    $transparent 40%,
+    $white 95%
+  );
+}
+.bubble5 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  left: 70%;
+  border-radius: 50%;
+  opacity: 0;
+  animation-name: bubble-left;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 50% 45%,
+    $transparent 0%,
+    $transparent 40%,
+    $white 95%
+  );
+}
+@keyframes bubble-left {
+  10% {
+    margin-bottom: 10%;
+    margin-left: 10%;
+    opacity: 1;
+  }
+  30% {
+    margin-bottom: 30%;
+    margin-left: 0%;
+  }
+  50% {
+    margin-bottom: 50%;
+    margin-left: 10%;
+  }
+  70% {
+    margin-bottom: 70%;
+    margin-left: 0%;
+  }
+  90% {
+    margin-bottom: 90%;
+    margin-left: 10%;
+  }
+  100% {
+    margin-bottom: 100%;
+    margin-left: 0%;
+    opacity: 0;
+  }
+}
+@keyframes bubble-right {
+  20% {
+    margin-bottom: 20%;
+    margin-left: -10%;
+    opacity: 1;
+  }
+  40% {
+    margin-bottom: 40%;
+    margin-left: 0%;
+  }
+  60% {
+    margin-bottom: 60%;
+    margin-left: -10%;
+  }
+  80% {
+    margin-bottom: 80%;
+    margin-left: 0%;
+  }
+
+  100% {
+    margin-bottom: 100%;
+    margin-left: -10%;
+    opacity: 0;
+  }
+}
