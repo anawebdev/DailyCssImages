@@ -1,0 +1,169 @@
+// COLOR SCHEME
+
+$ruler-dark: #455A64;
+$ruler: #FFD54F;
+$eyes: #00796B;
+$mouth: #ef5350;
+$stripes: #37474F;
+$dark-bckg: #009688;
+$light-bckg: #B2DFDB;
+
+// MIXINS
+
+@mixin general($height, $width, $top, $left, $color, $radius) {
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: $top;
+  left: $left;
+  background: $color;
+  border-radius: $radius;
+}
+
+@mixin rotate($degrees) {
+  transform: rotate($degrees);
+}
+
+@mixin stripe($direction, $width-percent, $stripe-color, $stripe-background: #FFF) {
+  background: repeating-linear-gradient(
+    $direction,
+    $stripe-background,
+    $stripe-background ($width-percent - 1),
+    $stripe-color 1%,
+    $stripe-background $width-percent
+  );
+}
+
+// GENERAL SETTINGS
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: $dark-bckg;
+  background: -webkit-linear-gradient(to bottom, $light-bckg $dark-bckg);
+  background: linear-gradient(to bottom, $light-bckg, $dark-bckg);
+  background-attachment: fixed;
+  color: $eyes;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 50px;
+}
+h4 {
+  text-align: center;
+}
+
+a:active, a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: $eyes;
+}
+
+// MAIN BOX
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  padding: 0;
+  margin-top: 30px;
+  width: 600px;
+  height: 450px;
+}
+
+// RULER 
+
+.front-side {
+  @include general(20%, 80%, 40%, 10%, $ruler, 6px);
+}
+.thickness {
+  @include general(21%, 81%, 40%, 10%, $ruler-dark, 6px);
+}
+
+// EYES
+
+.eye-l {
+  @include general(15%, 8%, 33%, 13%, white, 50%);
+  @include rotate(-10deg);
+  border: 0.5px solid $stripes;
+}
+.eye-color-l {
+  @include general(50%, 50%, 40%, 25%, $eyes, 50%);
+}
+.eye-black-l {
+  @include general(70%, 70%, 15%, 15%, black, 50%);
+}
+.shine-big-l {
+  @include general(20%, 30%, 15%, 15%, white, 50%);
+}
+.shine-small-l {
+  @include general(10%, 15%, 40%, 13%, white, 50%);
+}
+.eye-r {
+  @include general(15%, 8%, 33%, 22%, white, 50%);
+  @include rotate(10deg);
+  border: 0.5px solid $stripes;
+}
+.eye-color-r {
+  @include general(50%, 50%, 40%, 25%, $eyes, 50%);
+}
+.eye-black-r {
+  @include general(70%, 70%, 15%, 15%, black, 50%);
+}
+.shine-big-r {
+  @include general(20%, 30%, 15%, 15%, white, 50%);
+}
+.shine-small-r {
+  @include general(10%, 15%, 40%, 13%, white, 50%);
+}
+.stripes {
+  @include general(35%, 90%, 2%, 5%, white, 0);
+  @include stripe(to right, 3%, $stripes, $ruler);
+}
+
+// TEXT BOX
+
+.text-box {
+  @include general(15%, 20%, 13%, 35%, white, 5px);
+}
+.text-triangle {
+  @include general(15%, 20%, 19%, 35%, white, 5px);
+  -webkit-clip-path: polygon(53% 0, 0% 100%, 100% 0);
+  clip-path: polygon(53% 0, 0% 100%, 100% 0);
+}
+// CROWN 
+
+.crown {
+  @include general (12%, 12%, 19.89%, 10%, $ruler, 0);
+  -webkit-clip-path: polygon(
+    100% 100%,
+    100% 0,
+    75% 50%,
+    50% 0%,
+    25% 50%,
+    0 0,
+    0 100%
+  );
+  clip-path: polygon(100% 100%, 100% 0, 75% 50%, 50% 0%, 25% 50%, 0 0, 0 100%);
+  @include rotate(-18deg);
+}
+
+// MOUTH
+
+.mouth {
+  @include general(50px, 50px, 25%, 10%, $mouth, 50%);
+}
+.inner-mouth {
+  @include general(50px, 55px, -10%, -10%, $ruler, 50%);
+}
