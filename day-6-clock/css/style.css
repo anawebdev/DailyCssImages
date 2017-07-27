@@ -1,0 +1,182 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #FB8C00;
+  background: -webkit-linear-gradient(to bottom, #FFEB3B #FB8C00);
+  background: linear-gradient(to bottom, #FFEB3B, #FB8C00);
+  background-attachment: fixed;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+a:active, a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #D81B60;
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  padding: 0;
+  margin-top: 30px;
+  width: 600px;
+  height: 450px;
+}
+
+.frame {
+  position: absolute;
+  height: 50%;
+  width: 37.5%;
+  left: 31.25%;
+  top: 25%;
+  background: #00ACC1;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.second-frame {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  background: white;
+  background: -webkit-radial-gradient(white, #ECEFF1, #ECEFF1);
+  /* Safari 5.1- 6.0 */
+  background: -o-radial-gradient(white, #ECEFF1, #ECEFF1);
+  /* Opera 11.6-12.0 */
+  background: -moz-radial-gradient(white, #ECEFF1, #ECEFF1);
+  /* Firefox 3.6-15 */
+  background: radial-gradient(#ffffff, #ffffff, #eceff1);
+  /* Standard syntax */
+}
+
+.back {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  left: 5%;
+  top: 5%;
+  background: #ECEFF1;
+  border-radius: 50%;
+}
+
+.top {
+  position: absolute;
+  height: 10%;
+  width: 4%;
+  left: 48%;
+  background: #607D8B;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.bottom {
+  position: absolute;
+  height: 10%;
+  width: 4%;
+  left: 48%;
+  bottom: 0;
+  background: #607D8B;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.left {
+  position: absolute;
+  height: 4%;
+  width: 10%;
+  top: 48%;
+  left: 0;
+  background: #607D8B;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.right {
+  position: absolute;
+  height: 4%;
+  width: 10%;
+  top: 48%;
+  right: 0;
+  background: #607D8B;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.center-m {
+  position: absolute;
+  height: 4%;
+  width: 4%;
+  top: 48%;
+  right: 48%;
+  background: #283593;
+  border-radius: 50%;
+  animation: time 12s infinite linear;
+}
+.center-m .minute {
+  position: absolute;
+  height: 1000%;
+  width: 25%;
+  top: 10%;
+  left: 37.2%;
+  background: #283593;
+}
+
+.center-s {
+  position: absolute;
+  height: 4%;
+  width: 4%;
+  top: 48%;
+  right: 48%;
+  background: #1565C0;
+  border-radius: 50%;
+  animation: time 2s infinite linear;
+}
+.center-s .second {
+  position: absolute;
+  height: 800%;
+  width: 20%;
+  top: 10%;
+  left: 40%;
+  background: #1565C0;
+}
+
+.center-h {
+  position: absolute;
+  height: 4%;
+  width: 4%;
+  top: 48%;
+  right: 48%;
+  background: #9C27B0;
+  border-radius: 50%;
+  animation: time 72s infinite linear;
+}
+.center-h .hour {
+  position: absolute;
+  height: 500%;
+  width: 30%;
+  top: 30%;
+  left: 35%;
+  background: #9C27B0;
+}
+
+@keyframes time {
+  to {
+    -webkit-transform: rotate(360deg);
+    -webkit-transform: translate(0% -50%);
+  }
+}

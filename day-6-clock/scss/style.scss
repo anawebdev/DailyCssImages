@@ -1,0 +1,192 @@
+// COLOR SCHEME
+
+$frame: #00ACC1;
+$base: #ECEFF1;
+$second-base: white;
+$hour: #9C27B0;
+$minute: #283593;
+$second: #1565C0;
+$numbers: #607D8B;
+$dark-bckg: #FB8C00;
+$light-bckg: #FFEB3B;
+$shadow: rgba(0, 0, 0, 0.3);
+$transparent-shine: rgba(129, 212, 250, 0.2);
+$white: rgba(225, 225, 225, 0.75);
+$transparent: rgba(225, 225, 225, 0.2);
+
+// GENERAL SETTINGS
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: $dark-bckg;
+  background: -webkit-linear-gradient(to bottom, $light-bckg $dark-bckg);
+  background: linear-gradient(to bottom, $light-bckg, $dark-bckg);
+  background-attachment: fixed;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+a:active, a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #D81B60;
+}
+
+// MAIN BOX
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  padding: 0;
+  margin-top: 30px;
+  width: 600px;
+  height: 450px;
+}
+.frame {
+  position: absolute;
+  height: 50%;
+  width: 37.5%;
+  left: 31.25%;
+  top: 25%;
+  background: $frame;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px $shadow;
+}
+.second-frame {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  background: $second-base;
+  background: -webkit-radial-gradient(
+    white,
+    $base,
+    $base
+  ); /* Safari 5.1- 6.0 */
+  background: -o-radial-gradient(white, $base, $base); /* Opera 11.6-12.0 */
+  background: -moz-radial-gradient(white, $base, $base); /* Firefox 3.6-15 */
+  background: radial-gradient(white, white, $base); /* Standard syntax */
+}
+.back {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  left: 5%;
+  top: 5%;
+  background: $base;
+  border-radius: 50%;
+}
+.top {
+  position: absolute;
+  height: 10%;
+  width: 4%;
+  left: 48%;
+  background: $numbers;
+  box-shadow: 2px 2px 3px $shadow;
+}
+.bottom {
+  position: absolute;
+  height: 10%;
+  width: 4%;
+  left: 48%;
+  bottom: 0;
+  background: $numbers;
+  box-shadow: 2px 2px 3px $shadow;
+}
+.left {
+  position: absolute;
+  height: 4%;
+  width: 10%;
+  top: 48%;
+  left: 0;
+  background: $numbers;
+  box-shadow: 2px 2px 3px $shadow;
+}
+.right {
+  position: absolute;
+  height: 4%;
+  width: 10%;
+  top: 48%;
+  right: 0;
+  background: $numbers;
+  box-shadow: 2px 2px 3px $shadow;
+}
+.center-m {
+  position: absolute;
+  height: 4%;
+  width: 4%;
+  top: 48%;
+  right: 48%;
+  background: $minute;
+  border-radius: 50%;
+  .minute {
+    position: absolute;
+    height: 1000%;
+    width: 25%;
+    top: 10%;
+    left: 37.2%;
+    background: $minute;
+  }
+  animation: time 12s infinite linear;
+}
+.center-s {
+  position: absolute;
+  height: 4%;
+  width: 4%;
+  top: 48%;
+  right: 48%;
+  background: $second;
+  border-radius: 50%;
+  .second {
+    position: absolute;
+    height: 800%;
+    width: 20%;
+    top: 10%;
+    left: 40%;
+    background: $second;
+  }
+  animation: time 2s infinite linear;
+}
+.center-h {
+  position: absolute;
+  height: 4%;
+  width: 4%;
+  top: 48%;
+  right: 48%;
+  background: $hour;
+  border-radius: 50%;
+  .hour {
+    position: absolute;
+    height: 500%;
+    width: 30%;
+    top: 30%;
+    left: 35%;
+    background: $hour;
+  }
+  animation: time 72s infinite linear;
+}
+
+@keyframes time {
+  to {
+    -webkit-transform: rotate(360deg);
+    -webkit-transform: translate(0% -50%);
+  }
+}

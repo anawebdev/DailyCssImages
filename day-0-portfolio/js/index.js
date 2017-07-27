@@ -116,20 +116,23 @@ var App = React.createClass({
         img1: "http://i.imgur.com/5ZooWEN.jpg",
         img2: "http://i.imgur.com/w4zaL04.jpg",
         img3: "http://i.imgur.com/dCVqWpP.jpg",
-        img4: "http://via.placeholder.com/150x150",
-        img5: "http://via.placeholder.com/150x150",
+        img4: "http://i.imgur.com/jNsLutf.jpg",
+        img5: "http://i.imgur.com/wvCnj2y.jpg",
         url1: "https://codepen.io/feuerbird29/full/JWOBdV/",
         url2: "https://codepen.io/feuerbird29/full/jLNjmw/",
-        url3: "https://codepen.io/feuerbird29/full/OjPRmm/"
+        url3: "https://codepen.io/feuerbird29/full/OjPRmm/",
+        url4: "https://codepen.io/feuerbird29/full/VzYyLZ/",
+        url5: "https://codepen.io/feuerbird29/full/oeXbpN/"
       }),
       React.createElement(Section, {
         week: "2",
         text: "- office objects -",
-        img1: "",
+        img1: "http://i.imgur.com/xEGZEFA.jpg",
         img2: "",
         img3: "",
         img4: "",
-        img5: ""
+        img5: "",
+        url1: "https://codepen.io/feuerbird29/full/GvJdyZ/"
       }),
       React.createElement(Section, {
         week: "3",

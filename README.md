@@ -16,3 +16,10 @@ This repository tracks the #dailycssimages challenge. More info about the challe
 4. [Tiger](https://codepen.io/feuerbird29/full/VzYyLZ)
 5. [Dory from Finding Nemo](https://codepen.io/feuerbird29/full/oeXbpN)
 
+### Week 2
+
+6. [Clock](https://codepen.io/feuerbird29/full/GvJdyZ/)
+7. Ruler
+8. Notepad
+9. Calendar
+10. Pencil Jar
