@@ -129,11 +129,12 @@ var App = React.createClass({
         text: "- office objects -",
         img1: "http://i.imgur.com/xEGZEFA.jpg",
         img2: "http://i.imgur.com/bqcS5op.jpg",
-        img3: "",
+        img3: "http://i.imgur.com/L8N2jGe.jpg",
         img4: "",
         img5: "",
         url1: "https://codepen.io/feuerbird29/full/GvJdyZ/",
-        url2: "https://codepen.io/feuerbird29/full/BdNbEy/"
+        url2: "https://codepen.io/feuerbird29/full/BdNbEy/",
+        url3: "https://codepen.io/feuerbird29/full/brVRgJ/"
       }),
       React.createElement(Section, {
         week: "3",

@@ -20,6 +20,6 @@ This repository tracks the #dailycssimages challenge. More info about the challe
 
 6. [Clock](https://codepen.io/feuerbird29/full/GvJdyZ/)
 7. [Ruler](https://codepen.io/feuerbird29/full/BdNbEy)
-8. Notepad
+8. [Notepad](https://codepen.io/feuerbird29/full/brVRgJ)
 9. Calendar
 10. Pencil Jar
