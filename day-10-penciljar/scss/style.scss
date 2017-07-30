@@ -1,0 +1,176 @@
+// COLOR SCHEME
+
+$dark-bckg: #4DB6AC;
+$light-bckg: #E0F2F1;
+$lead: #455A64;
+$wood: #fff2c2;
+$pen-light: #FEE39F;
+$pen-dark: #fed775;
+$eraser-light: #ef9a9a;
+$eraser-dark: #e57373;
+$metal-light: #B2DFDB;
+$metal-dark: #4DB6AC;
+
+// MIXINS
+
+@mixin general($height, $width, $top, $left, $color, $radius) {
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: $top;
+  left: $left;
+  background: $color;
+  border-radius: $radius;
+}
+
+@mixin rotate($degrees) {
+  -ms-transform: rotate($degrees);
+  -webkit-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+// GENERAL SETTINGS
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: $dark-bckg;
+  background: -webkit-linear-gradient(to bottom, $light-bckg $dark-bckg);
+  background: linear-gradient(to bottom, $light-bckg, $dark-bckg);
+  background-attachment: fixed;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 50px;
+}
+h4 {
+  text-align: center;
+}
+
+a:active, a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: $eraser-light;
+}
+
+// MAIN BOX
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  padding: 0;
+  margin-top: 30px;
+  width: 600px;
+  height: 450px;
+  //border: 3px solid white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.pencil {
+  @include general(8px, 200px, 221px, 200px, $pen-light, 0 0px 0px 0);
+  @include rotate(90deg);
+  box-shadow: 5px 0px 0px $metal-light,
+    18px 0 0 $eraser-light,
+    0px 8px 0px $pen-dark,
+    5px 8px 0px $metal-dark,
+    18px 8px 0px $eraser-dark;
+  border: 0.2px solid rgba(253, 194, 46, 0.7);
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: -40px;
+    top: 4px;
+    background: transparent;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 15px solid $lead;
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: -40px;
+    background: transparent;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 40px solid $wood;
+  }
+}
+
+$pencil: 5;
+
+@for $i from 1 through $pencil {
+  $degrees: 45deg + $i*15deg;
+
+  .pencil:nth-of-type(#{$i}) {
+    @include rotate($degrees);
+  }
+}
+
+.pencil {
+  animation: juggle 5s infinite linear;
+  animation-direction: alternate;
+}
+
+@keyframes juggle {
+  to {
+    @include rotate(90deg);
+  }
+}
+
+.jar {
+  @include general(40%, 24%, 100%, 38%, rgba(225,225,225,0.5), 5px 5px 40px 40px);
+  animation: lift 10s infinite linear;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  box-sizing: border-box;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 5%;
+    background: rgba(225, 225, 225, 0.5);
+    left: 10%;
+    top: 30%;
+    border-radius: 5px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    height: 5%;
+    width: 5%;
+    background: rgba(225, 225, 225, 0.4);
+    left: 10%;
+    top: 75%;
+    border-radius: 5px;
+  }
+}
+
+@keyframes lift {
+  70% {
+    top: 40%;
+  }
+  100% {
+    top: 40%;
+  }
+}

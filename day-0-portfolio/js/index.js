@@ -130,11 +130,13 @@ var App = React.createClass({
         img1: "http://i.imgur.com/xEGZEFA.jpg",
         img2: "http://i.imgur.com/bqcS5op.jpg",
         img3: "http://i.imgur.com/L8N2jGe.jpg",
-        img4: "",
-        img5: "",
+        img4: "http://i.imgur.com/e0K4Py6.jpg",
+        img5: "http://i.imgur.com/lSml1WF.jpg",
         url1: "https://codepen.io/feuerbird29/full/GvJdyZ/",
         url2: "https://codepen.io/feuerbird29/full/BdNbEy/",
-        url3: "https://codepen.io/feuerbird29/full/brVRgJ/"
+        url3: "https://codepen.io/feuerbird29/full/brVRgJ/",
+        url4: "https://codepen.io/feuerbird29/full/prjpxp/",
+        url5: "https://codepen.io/feuerbird29/full/WErXMB"
       }),
       React.createElement(Section, {
         week: "3",

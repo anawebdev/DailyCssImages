@@ -1,0 +1,172 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #4DB6AC;
+  background: -webkit-linear-gradient(to bottom, #E0F2F1 #4DB6AC);
+  background: linear-gradient(to bottom, #E0F2F1, #4DB6AC);
+  background-attachment: fixed;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+h4 {
+  text-align: center;
+}
+
+a:active, a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #ef9a9a;
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  padding: 0;
+  margin-top: 30px;
+  width: 600px;
+  height: 450px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.pencil {
+  position: absolute;
+  height: 8px;
+  width: 200px;
+  top: 221px;
+  left: 200px;
+  background: #FEE39F;
+  border-radius: 0 0px 0px 0;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  box-shadow: 5px 0px 0px #B2DFDB, 18px 0 0 #ef9a9a, 0px 8px 0px #fed775, 5px 8px 0px #4DB6AC, 18px 8px 0px #e57373;
+  border: 0.2px solid rgba(253, 194, 46, 0.7);
+}
+.pencil:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  left: -40px;
+  top: 4px;
+  background: transparent;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 15px solid #455A64;
+}
+.pencil:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  left: -40px;
+  background: transparent;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 40px solid #fff2c2;
+}
+
+.pencil:nth-of-type(1) {
+  -ms-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.pencil:nth-of-type(2) {
+  -ms-transform: rotate(75deg);
+  -webkit-transform: rotate(75deg);
+  transform: rotate(75deg);
+}
+
+.pencil:nth-of-type(3) {
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.pencil:nth-of-type(4) {
+  -ms-transform: rotate(105deg);
+  -webkit-transform: rotate(105deg);
+  transform: rotate(105deg);
+}
+
+.pencil:nth-of-type(5) {
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.pencil {
+  animation: juggle 5s infinite linear;
+  animation-direction: alternate;
+}
+
+@keyframes juggle {
+  to {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+.jar {
+  position: absolute;
+  height: 40%;
+  width: 24%;
+  top: 100%;
+  left: 38%;
+  background: rgba(225, 225, 225, 0.5);
+  border-radius: 5px 5px 40px 40px;
+  animation: lift 10s infinite linear;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  box-sizing: border-box;
+}
+.jar:before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 5%;
+  background: rgba(225, 225, 225, 0.5);
+  left: 10%;
+  top: 30%;
+  border-radius: 5px;
+}
+.jar:after {
+  content: "";
+  position: absolute;
+  height: 5%;
+  width: 5%;
+  background: rgba(225, 225, 225, 0.4);
+  left: 10%;
+  top: 75%;
+  border-radius: 5px;
+}
+
+@keyframes lift {
+  70% {
+    top: 40%;
+  }
+  100% {
+    top: 40%;
+  }
+}
