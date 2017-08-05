@@ -1,0 +1,243 @@
+// COLOR SCHEME
+
+$crust: #FFCC80;
+$cheese: #FFF59D;
+$pepperoni: #c62828;
+$specks: #b71c1c;
+$basil: #7CB342;
+$text: #455A64;
+$accent: #9C27B0;
+$shadow: rgba(0, 0, 0, 0.2);
+$background: #E8EAF6;
+
+// MIXINS
+
+@mixin general($height, $width, $top, $left, $color, $radius) {
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: $top;
+  left: $left;
+  background: $color;
+  border-radius: $radius;
+}
+
+@mixin rotate($degrees) {
+  -ms-transform: rotate($degrees);
+  -webkit-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin speck($size,$top,$left,$color) {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: $size;
+  height: $size;
+  background: $color;
+  border-radius: 50%;
+  left: $left;
+  top: $top;
+}
+
+// GENERAL SETTINGS
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: $background;
+  background-attachment: fixed;
+  color: $text;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+  color: $text;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 50px;
+}
+h4 {
+  text-align: center;
+}
+
+a:active, a:link, a:visited {
+  text-decoration: none;
+  color: $text;
+}
+
+a:hover {
+  color: $accent;
+}
+
+// MAIN BOX
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  padding: 0;
+  margin-top: 30px;
+  width: 600px;
+  height: 450px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.crust {
+  @include general(60%, 45%, 0%, 25%, red, 50%);
+  -moz-border-radius: 270px 0 0 0;
+  border-radius: 270px 0 0 0;
+  background: $crust;
+  @include rotate(45deg);
+}
+.slice {
+  @include general(55%, 40%, 7%, 28%, $cheese, 50%);
+  -moz-border-radius: 270px 0 0 0;
+  border-radius: 270px 0 0 0;
+  @include rotate(45deg);
+}
+.salami1 {
+  @include general(20%, 20%, 20%, 63%, $pepperoni, 50%);
+  border: 3px solid $specks;
+  box-shadow: 2px 2px 5px $shadow;
+  &:before {
+    @include speck(10px,25%,10%,$specks);
+  }
+  &:after {
+    @include speck(10px,70%,30%,$specks);
+  }
+}
+.salami2 {
+  @include general(20%, 20%, 70%, 23%, $pepperoni, 50%);
+  border: 3px solid $specks;
+  box-shadow: 2px 2px 5px $shadow;
+  &:before {
+    @include speck(10px,65%,70%,$specks);
+  }
+  &:after {
+    @include speck(10px,30%,30%,$specks);
+  }
+}
+.salami3 {
+  @include general(20%, 20%, 60%, 75%, $pepperoni, 50%);
+  border: 3px solid $specks;
+  box-shadow: 2px 2px 5px $shadow;
+  &:before {
+    @include speck(10px,65%,70%,$specks);
+  }
+  &:after {
+    @include speck(10px,30%,50%,$specks);
+  }
+}
+.basil1 {
+  @include speck(20px, 40%, 30%, $basil);
+  box-shadow: 2px 2px 5px $shadow;
+}
+.basil2 {
+  @include speck(20px, 70%, 50%, $basil);
+  box-shadow: 2px 2px 5px $shadow;
+}
+.basil3 {
+  @include speck(20px, 10%, 70%, $basil);
+  box-shadow: 2px 2px 5px $shadow;
+}
+.basil4 {
+  @include speck(20px, 80%, 60%, $basil);
+  box-shadow: 2px 2px 5px $shadow;
+}
+.bite1 {
+  @include general(150px, 150px, 55%, 40%, $background, 50%);
+  animation: eat1 8s infinite linear;
+}
+.bite2 {
+  @include general(150px, 150px, 45%, 25%, $background, 50%);
+  animation: eat2 8s infinite linear;
+}
+.bite3 {
+  @include general(150px, 150px, 45%, 45%, $background, 50%);
+  animation: eat3 8s infinite linear;
+}
+.bite4 {
+  @include general(150px, 150px, 35%, 35%, $background, 50%);
+  animation: eat4 8s infinite linear;
+}
+.bite5 {
+  @include general(150px, 150px, 35%, 45%, $background, 50%);
+  animation: eat5 8s infinite linear;
+}
+@keyframes eat1 {
+  0% {
+    opacity: 0;
+  }
+  19% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes eat2 {
+  0% {
+    opacity: 0;
+  }
+  39% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes eat3 {
+  0% {
+    opacity: 0;
+  }
+  59% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes eat4 {
+  0% {
+    opacity: 0;
+  }
+  79% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes eat5 {
+  0% {
+    opacity: 0;
+  }
+  94% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

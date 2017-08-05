@@ -23,3 +23,7 @@ This repository tracks the #dailycssimages challenge. More info about the challe
 8. [Notepad](https://codepen.io/feuerbird29/full/brVRgJ)
 9. [Calendar](https://codepen.io/feuerbird29/full/prjpxp/)
 10. [Pencil Jar](https://codepen.io/feuerbird29/full/WErXMB/)
+
+### Week 3
+
+11. Pizza
