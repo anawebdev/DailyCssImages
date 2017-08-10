@@ -1,0 +1,235 @@
+// COLOR SCHEME
+
+$bun: #F7BC50;
+$bun-light: #FFE082;
+$seeds: #66BB6A;
+$tomato: #e53935;
+$cheese: #F9A825;
+$meat: #795548;
+$salad: #7CB342;
+$shadow: rgba(0, 0, 0, 0.4);
+
+// MIXINS
+
+@mixin general($height, $width, $top, $left, $color, $radius) {
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: $top;
+  left: $left;
+  background: $color;
+  border-radius: $radius;
+}
+
+@mixin rotate($degrees) {
+  -ms-transform: rotate($degrees);
+  -webkit-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin gradient($direction, $color1, $color2, $color3) {
+  background: -webkit-linear-gradient($direction, $color1, $color2, $color3);
+  background: -o-linear-gradient($direction, $color1, $color2, $color3);
+  background: -moz-linear-gradient($direction, $color1, $color2, $color3);
+  background: linear-gradient($direction, $color1, $color2, $color3);
+}
+
+@mixin radial($color1, $color2, $color3) {
+  background: -webkit-radial-gradient($color1, $color2, $color3);
+  background: -o-radial-gradient($color1, $color2, $color3);
+  background: -moz-radial-gradient($color1, $color2, $color3);
+  background: radial-gradient($color1, $color2, $color3);
+}
+
+// GENERAL SETTINGS
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #E3F2FD;
+  color: $meat;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+  color: $meat;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 50px;
+}
+h4 {
+  text-align: center;
+}
+
+a:active, a:link, a:visited {
+  text-decoration: none;
+  color: $meat;
+}
+
+a:hover {
+  color: $tomato;
+}
+
+// MAIN BOX
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  padding: 0;
+  margin-top: 30px;
+  width: 600px;
+  height: 450px;
+  //border: 3px solid white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.top-bun {
+  @include general(30%,50%,19%,25%,$bun, 120% 120% 50% 50%);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  &:before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    @include general(70%,80%,0%,10%,$bun-light, 120% 120% 70% 70%);
+  }
+}
+.tomato {
+  @include general(6%,50%,49%,25%,$tomato, 22px);
+  &:before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 15%;
+    height: 100%;
+    top: 0%;
+    left: 15%;
+    border-radius: 0%;
+    @include gradient(to right,  rgba(225,225,225,0.1), rgba(225,225,225,0.8), rgba(225,225,225,0.1));
+  }
+}
+.meat {
+  @include general(10%,50%,55%,25%,$meat, 22px);
+}
+.bottom-bun {
+  @include general(16%,50%,65%,25%,$bun, 40% 40% 120% 120%);
+  &:before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    @include general(70%,80%,5%,10%,$bun-light, 60% 60% 120% 120%);
+  }
+}
+.salad {
+  @include general(100%, 60%, 0%, 19%, $salad, 0);
+  -webkit-clip-path: polygon(
+    26% 49%,
+    17% 50%,
+    8% 52%,
+    2% 54%,
+    2% 46%,
+    9% 39%,
+    18% 36%,
+    25% 35%,
+    33% 38%,
+    40% 40%,
+    58% 39%,
+    69% 41%,
+    80% 37%,
+    87% 37%,
+    92% 39%,
+    98% 43%,
+    100% 50%,
+    100% 54%,
+    92% 53%,
+    86% 50%,
+    80% 51%,
+    74% 52%,
+    66% 52%,
+    63% 50%,
+    59% 50%,
+    49% 53%,
+    44% 54%,
+    33% 52%,
+    29% 48%,
+    25% 49%
+  );
+  clip-path: polygon(
+    26% 49%,
+    17% 50%,
+    8% 52%,
+    2% 54%,
+    2% 46%,
+    9% 39%,
+    18% 36%,
+    25% 35%,
+    33% 38%,
+    40% 40%,
+    58% 39%,
+    69% 41%,
+    80% 37%,
+    87% 37%,
+    92% 39%,
+    98% 43%,
+    100% 50%,
+    100% 54%,
+    92% 53%,
+    86% 50%,
+    80% 51%,
+    74% 52%,
+    66% 52%,
+    63% 50%,
+    59% 50%,
+    49% 53%,
+    44% 54%,
+    33% 52%,
+    29% 48%,
+    25% 49%
+  );
+  @include gradient(to bottom,  $salad, $salad, $salad);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+.cheese1 {
+  @include general(0%, 0%, 55%, 29%, transparent, 0);
+  border-top: solid 30px $cheese;
+  border-right: solid 60px transparent;
+  border-bottom: solid 20px transparent;
+  border-left: solid 60px transparent;
+}
+.cheese2 {
+  @include general(0%, 0%, 55%, 51%, transparent, 0);
+  border-top: solid 30px $cheese;
+  border-right: solid 60px transparent;
+  border-bottom: solid 20px transparent;
+  border-left: solid 60px transparent;
+}
+.seed1 {
+  @include general(7px,14px,19%,25%,$bun, 120% 120% 120% 120%);
+  @include rotate(30deg);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.seed2 {
+  @include general(5px,10px,40%,35%,$bun, 120% 120% 120% 120%);
+  @include rotate(-40deg);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.seed3 {
+  @include general(5px,15px,24%,55%,$bun, 120% 120% 120% 120%);
+  @include rotate(-10deg);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.seed4 {
+  @include general(7px,14px,50%,65%,$bun, 120% 120% 120% 120%);
+  @include rotate(80deg);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.seed5 {
+  @include general(5px,10px,30%,80%,$bun, 120% 120% 120% 120%);
+  @include rotate(30deg);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
